@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        #svgEditorBackground {
+
+        }
+
+        #e3_circle {
+            color: black;
+        }
+
+        #e3_circle:hover {
+            color: red;
+        }
+
+        #e3_circle:hover + line {
+            color: red;
+            stroke-dasharray: 430px;
+            stroke-dashoffset: 430;
+            animation: dash 1s linear forwards;
+        }
+
+        #e3_circle:hover ~ #e2_rectangle {
+            color: red;
+            transition-property: color;
+            transition-delay: 1s;
+        }
+
+        #e1_line {
+            color: black;
+        }
+
+        @keyframes dash {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <svg xmlns="http://www.w3.org/2000/svg" width="810px" height="550px" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 810 550" preserveAspectRatio="xMidYMid meet" >
+        <rect id="svgEditorBackground" x="0" y="0" width="810" height="550" style="fill: none; stroke: none;"/>
+        <circle id="e3_circle" cx="116" cy="230" style="fill:currentColor;stroke:black;stroke-width:1px;" r="17.8885"/>
+        <line id="e1_line" x1="134" y1="232" x2="561" y2="230" style="stroke:currentColor;stroke-width:2px;"/>
+        <rect x="562" y="216" style="fill:currentColor;stroke:black;stroke-width:1px;" id="e2_rectangle" width="64" height="30"/>
+    </svg>
+</body>
+</html>
